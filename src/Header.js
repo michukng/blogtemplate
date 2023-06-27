@@ -20,8 +20,8 @@ const Header = () => {
 
   return (
     <header>
-      <h1 className='h1-header'>{width >= 750 ? "BEDPOK" : "BDPK"}</h1>
-      <section id='nav' className={width >= 750 ? "nav-header" : burger}>
+      <h1 className='h1-header'>{width >= 850 ? "BEDPOK" : "BDPK"}</h1>
+      <section id='nav' className={width >= 850 ? "nav-header" : burger}>
         <p className='p-nav-header'>Home</p>
         <p className='p-nav-header'>About</p>
         <p className='p-nav-header'>Contact</p>
@@ -29,7 +29,7 @@ const Header = () => {
           type="text"
           placeholder="&#x1F50E;&#xFE0E; Search"
           className='input-search-header' 
-        />{width >= 750
+        />{width >= 850
           ? <button className='sub-btn'>Subscribe</button>
           : <p className="p-nav-header">Subscribe</p>
       }
@@ -40,6 +40,9 @@ const Header = () => {
           <div className={!active ? "line-burger" : "close-burger"}></div>
           <div className={!active ? "line-burger" : "close-burger"}></div>
           <div className={!active ? "line-burger" : "close-burger"}></div>
+          {/* <div className="line-burger"></div>
+          <div className="line-burger"></div>
+          <div className="line-burger"></div> */}
         </button>
       
     </header>

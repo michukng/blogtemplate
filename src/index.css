@@ -29,13 +29,14 @@ header {
 
 .h1-header {
   font-weight: 900;
-  margin: auto;
+  margin-left: 3.5em;
 }
 
 .nav-header {
   display: flex;
   align-items: center;
-  margin: auto;
+  position: absolute;
+  right: 3em;
 }
 
 .p-nav-header {
@@ -79,22 +80,24 @@ header {
   display: none;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 850px) {
    .burger {
     display: block;
-    margin-right: 2em;
+    position: absolute;
+    right: 3em;
   }
 
   .p-nav-header, .input-search-header, .sub-btn {
     display: none;
   }
 
+
   .h1-header {
-    margin-left: 1em;
+    margin-left: 0.5em;
   }
 
   .line-burger {
-    height: 0.2em;
+    height: 0.1em;
     width: 2.5em;
     margin: 0.6em;
     background-color: var(--BLACK);
@@ -114,7 +117,6 @@ header {
   }
 
   .active-burger > .p-nav-header {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;  
@@ -125,20 +127,69 @@ header {
   }
   
   .close-burger:first-child {
+    position: absolute;
     height: 0.2em;
     width: 2.5em;
-    margin: 0.6em;
+    top: -0.5em;
+    right: 0.5em;
     background-color: var(--BLACK);
     transform: rotate(45deg);
     transition: ease 0.2s;
   }
 
   .close-burger:nth-child(2) {
+    position: absolute;
     height: 0.2em;
     width: 2.5em;
-    margin: 0.6em;
+    top: 0.2em;
+    right: 0.5em;
     background-color: var(--BLACK);
     transform: rotate(135deg) translate(-0.55em, 0.6em);
     transition: ease 0.2s;
   }
-} 
+}
+
+/* MAIN */
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 7em;
+}
+
+.main-header {
+  width: 35vw;
+}
+
+.p-category {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 1em;
+}
+
+.h1-category {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.p-lorem {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+@media only screen and (max-width: 850px) {
+  main {
+    margin: 2em;
+  }
+
+  .main-header {
+    width: 100%;
+  }
+
+  .h1-category {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+}
