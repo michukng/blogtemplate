@@ -40,9 +40,6 @@ const Header = () => {
           <div className={!active ? "line-burger" : "close-burger"}></div>
           <div className={!active ? "line-burger" : "close-burger"}></div>
           <div className={!active ? "line-burger" : "close-burger"}></div>
-          {/* <div className="line-burger"></div>
-          <div className="line-burger"></div>
-          <div className="line-burger"></div> */}
         </button>
       
     </header>
